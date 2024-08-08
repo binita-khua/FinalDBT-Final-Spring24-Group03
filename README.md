@@ -1,7 +1,7 @@
 # **DBT-Final-Spring24-Group3**
 
 ## **Project Overview**
-This project is an online bookstore system that manages physical books, e-books, and audiobooks. The system allows customers to browse the catalog, make purchases, and leave reviews. It also supports features for authors and publishers. The database is designed to track power writers, loyal customers, well-reviewed books, and the most popular genres.
+This project is an online bookstore system that manages physical books, e-books, and audiobooks. The system allows customers to browse the catalog, purchase, and leave reviews. It also supports features for authors and publishers. The database is designed to track power writers, loyal customers, well-reviewed books, and the most popular genres.
 
 ## **Table of Contents**
 - [Project Overview](#project-overview)
@@ -74,23 +74,27 @@ This project is an online bookstore system that manages physical books, e-books,
    git clone https://github.com/your-username/DBT-Final-Spring24-Group3.git
    cd DBT-Final-Spring24-Group3
    
- Install Dependencies: npm install
+ **Install Dependencies:**
+npm install
  
-Set Up Environment Variables:
+**Set Up Environment Variables:**
 Copy the .env.example file to .env and fill in the required environment variables.
 
-Run Migrations:npm run typeorm migration:run
+**Run Migrations:**
+npm run typeorm migration:run
 
-Start the Application:docker-compose up
+**Start the Application:**
+docker-compose up
 
-Database Schema
+**Database Schema:**
 The database contains tables like Books, Authors, Customers, Publishers, Reviews, Genres, and Sales. Refer to the Entity-Relationship Diagram for a visual representation.
 
-CRUD Operations
+**CRUD Operations:**
 CRUD operations are implemented for all tables, allowing users to create, read, update, and delete entries efficiently. These operations also handle business logic like tracking power writers and loyal customers.
 
-Testing
-Unit Tests: npm run test
+**Testing**
+**Unit Tests:**
+To run all Unit tests: npm run test
 Due to an issue with the pv semaphore, not all tests may pass with npm run test. Use the specific commands below to run tests for individual modules:
 test:flatfile
 test:author
@@ -101,9 +105,10 @@ test:review
 test:purchase
 test:sale
 
-Integration Tests: npm start
+**Integration Tests:**
+To run all Integration Tests: npm start
 
-Entity-Relationship Diagram
+**Entity-Relationship Diagram:**
 Refer to the attached Entity-Relationship Diagram (ERD) to understand the relationships between different entities within the database.
 ![image](https://github.com/user-attachments/assets/f9deb291-b4d0-496a-9826-244dea302908)
 
