@@ -9,20 +9,19 @@
     "test": "jest --config src/jest.config.js",
     "test:flatfile": "jest --config src/jest.config.js --testPathPattern='flatfile.test.ts'",
     "test:author": "jest --config src/jest.config.js --testPathPattern='author.test.ts'",
-    "test:author:create": "jest --config src/jest.config.js --testPathPattern='author.test.ts' --testNamePattern='should create an author and store it'",
+  
     "test:book": "jest --config src/jest.config.js --testPathPattern='book.test.ts'",
-    "test:book:create": "jest --config src/jest.config.js --testPathPattern='book.test.ts' --testNamePattern='should create a book and store it'",
+    
     "test:customer": "jest --config src/jest.config.js --testPathPattern='customer.test.ts'",
-    "test:customer:create": "jest --config src/jest.config.js --testPathPattern='customer.test.ts' --testNamePattern='should create a customer and store it'",
+  
     "test:publisher": "jest --config src/jest.config.js --testPathPattern='publisher.test.ts'",
-    "test:publisher:create": "jest --config src/jest.config.js --testPathPattern='publisher.test.ts' --testNamePattern='should create a publisher and store it'",
+  
     "test:review": "jest --config src/jest.config.js --testPathPattern='review.test.ts'",
-    "test:review:create": "jest --config src/jest.config.js --testPathPattern='review.test.ts' --testNamePattern='should create a review and store it'",
+   
     "test:purchase": "jest --config src/jest.config.js --testPathPattern='purchase.test.ts'",
-    "test:purchase:create": "jest --config src/jest.config.js --testPathPattern='purchase.test.ts' --testNamePattern='should create a purchase and store it'",
+  
     "test:sale": "jest --config src/jest.config.js --testPathPattern='sale.test.ts'",
-    "test:sale:create": "jest --config src/jest.config.js --testPathPattern='sale.test.ts' --testNamePattern='should create a sale and store it'",
-    "typeorm": "typeorm-ts-node-commonjs",
+   
     "typeorm:migrate": "npm run typeorm -- migration:run -d src/strategy/Postgresql/configure.ts",
     "typeorm:revert": "npm run typeorm -- migration:revert -d src/strategy/Postgresql/configure.ts",
     "typeorm:generate": "npm run typeorm -- migration:generate -d src/strategy/Postgresql/configure.ts -n",
