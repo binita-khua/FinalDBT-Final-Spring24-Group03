@@ -1,12 +1,50 @@
 {
-  "name": "src",
+  "name": "finalexam",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "build": "tsc",
+    "start": "nodemon --exec ts-node /server.ts",
+    "test": "jest --config src/jest.config.js",
+    "test:flatfile": "jest --config src/jest.config.js --testPathPattern='flatfile.test.ts'",
+    "test:author": "jest --config src/jest.config.js --testPathPattern='author.test.ts'",
+    "test:author:create": "jest --config src/jest.config.js --testPathPattern='author.test.ts' --testNamePattern='should create an author and store it'",
+    "test:book": "jest --config src/jest.config.js --testPathPattern='book.test.ts'",
+    "test:book:create": "jest --config src/jest.config.js --testPathPattern='book.test.ts' --testNamePattern='should create a book and store it'",
+    "test:customer": "jest --config src/jest.config.js --testPathPattern='customer.test.ts'",
+    "test:customer:create": "jest --config src/jest.config.js --testPathPattern='customer.test.ts' --testNamePattern='should create a customer and store it'",
+    "test:publisher": "jest --config src/jest.config.js --testPathPattern='publisher.test.ts'",
+    "test:publisher:create": "jest --config src/jest.config.js --testPathPattern='publisher.test.ts' --testNamePattern='should create a publisher and store it'",
+    "test:review": "jest --config src/jest.config.js --testPathPattern='review.test.ts'",
+    "test:review:create": "jest --config src/jest.config.js --testPathPattern='review.test.ts' --testNamePattern='should create a review and store it'",
+    "test:purchase": "jest --config src/jest.config.js --testPathPattern='purchase.test.ts'",
+    "test:purchase:create": "jest --config src/jest.config.js --testPathPattern='purchase.test.ts' --testNamePattern='should create a purchase and store it'",
+    "test:sale": "jest --config src/jest.config.js --testPathPattern='sale.test.ts'",
+    "test:sale:create": "jest --config src/jest.config.js --testPathPattern='sale.test.ts' --testNamePattern='should create a sale and store it'",
+    "typeorm": "typeorm-ts-node-commonjs",
+    "typeorm:migrate": "npm run typeorm -- migration:run -d src/strategy/Postgresql/configure.ts",
+    "typeorm:revert": "npm run typeorm -- migration:revert -d src/strategy/Postgresql/configure.ts",
+    "typeorm:generate": "npm run typeorm -- migration:generate -d src/strategy/Postgresql/configure.ts -n",
+    "typeorm:create": "npm run typeorm -- migration:create -d src/strategy/Postgresql/configure.ts -n"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "binita",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^22.1.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.4",
+    "reflect-metadata": "^0.2.2",
+    "ts-jest": "^29.2.1",
+    "ts-node": "^10.9.2",
+    "typeorm": "^0.3.20",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "pg": "^8.12.0"
+  }
 }
