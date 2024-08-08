@@ -1,60 +1,108 @@
-DBT-Final-Spring24-Group3
+# **DBT-Final-Spring24-Group3**
 
-Duties Assigned to Team Members
+## **Project Overview**
+This project is an online bookstore system that manages physical books, e-books, and audiobooks. The system allows customers to browse the catalog, make purchases, and leave reviews. It also supports features for authors and publishers. The database is designed to track power writers, loyal customers, well-reviewed books, and the most popular genres.
 
-Aayushi Mehta: Database Design & Implementation
+## **Table of Contents**
+- [Project Overview](#project-overview)
+- [Duties Assigned to Team Members](#duties-assigned-to-team-members)
+- [Technologies Used](#technologies-used)
+- [Setup Instructions](#setup-instructions)
+- [Database Schema](#database-schema)
+- [CRUD Operations](#crud-operations)
+- [Testing](#testing)
+- [Presentation](#presentation)
+- [Entity-Relationship Diagram](#entity-relationship-diagram)
 
-Database Schema Design:
+## **Duties Assigned to Team Members**
 
-Design the database schema based on the bookstore requirements.
-Include tables for Books, Customers, Authors, Publishers, Reviews, Genres, Sales, etc.
-Ensure the schema supports all required features like tracking power writers, loyal customers, well-reviewed books, most popular genres, etc.
-Create an Entity-Relationship Diagram (ERD) to visualize the database structure.
+### **Aayushi Mehta: Database Design & Implementation**
+1. **Database Schema Design:**
+   - Design the database schema based on the bookstore requirements.
+   - Include tables for `Books`, `Customers`, `Authors`, `Publishers`, `Reviews`, `Genres`, `Sales`, etc.
+   - Ensure the schema supports all required features like tracking power writers, loyal customers, well-reviewed books, most popular genres, etc.
+   - Create an Entity-Relationship Diagram (ERD) to visualize the database structure.
+  
+2. **TypeORM Setup:**
+   - Implement the database schema using TypeORM in TypeScript.
+   - Define entities, relationships, and constraints.
+   - Ensure the database is containerized and works in a Docker environment.
 
-TypeORM Setup:
+3. **Data Migration:**
+   - Implement a migration script that populates each table with at least three rows of data for testing and demonstration purposes.
 
-Implement the database schema using TypeORM in TypeScript.
-Define entities, relationships, and constraints.
-Ensure the database is containerized and works in a Docker environment.
+### **Binita Khua: CRUD Operations & Unit Testing**
+1. **CRUD Implementation:**
+   - Develop Create, Read, Update, and Delete (CRUD) operations for all tables.
+   - Ensure these operations handle all necessary business logic, such as calculating power writers, loyal customers, and well-reviewed books.
 
-Data Migration:
+2. **Unit Testing:**
+   - Write unit tests to cover the CRUD operations.
+   - Use a testing framework (like Jest) to ensure that each CRUD function behaves as expected.
 
-Implement a migration script that populates each table with at least three rows of data for testing and demonstration purposes.
+### **Bansi Kalariya: Integration Testing, Presentation & Documentation**
+1. **Integration Testing:**
+   - Develop integration tests to cover interactions between different tables.
+   - Test complex scenarios such as calculating the most popular genre by sales and fetching the 10 most recent reviews.
 
-Binita Khua: CRUD Operations & Testing
+2. **Presentation Preparation:**
+   - Create a 15-minute presentation that covers:
+     - The problem set and requirements.
+     - The database design and how it satisfies the requirements.
+     - The implementation of CRUD operations and testing strategies.
+     - How does the project ensure high data persistence and quality for the bookstore client?
 
-CRUD Implementation:
-Develop Create, Read, Update, and Delete (CRUD) operations for all the tables.
-Ensure that these operations handle all necessary business logic, such as calculating power writers, loyal customers, and well-reviewed books.
+3. **Documentation:**
+   - Document the entire system, including setup instructions, how to run the project, and how to execute tests.
+   - Write a README file that includes an overview of the project, dependencies, and how to get started.
 
-Unit Testing:
-Write unit tests to cover the CRUD operations.
-Use a testing framework (like Jest) to ensure that each CRUD function behaves as expected.
+## **Technologies Used**
+- **TypeScript**: Main programming language.
+- **TypeORM**: ORM used for managing database interactions.
+- **PostgreSQL/MySQL**: Relational database used.
+- **Docker**: Used for containerizing the application.
+- **Jest**: A testing framework for unit and integration tests.
 
-Integration Testing:
-Develop integration tests to cover interactions between different tables.
-Test complex scenarios such as calculating the most popular genre by sales and fetching the 10 most recent reviews.
+## **Setup Instructions**
+### **Prerequisites**
+- **Node.js** (version 14.x or higher)
+- **Docker** and **Docker Compose**
+- **Git**
 
-Bansi Kalariya:Presentation & Documentation
+### **Installation**
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/your-username/DBT-Final-Spring24-Group3.git
+   cd DBT-Final-Spring24-Group3
+   
+ Install Dependencies: npm install
+ 
+Set Up Environment Variables:
+Copy the .env.example file to .env and fill in the required environment variables.
 
-Presentation Preparation:
+Run Migrations:npm run typeorm migration:run
 
-Create a 15-minute presentation that covers:
-The problem set and requirements.
-The database design and how it satisfies the requirements.
-The implementation of CRUD operations and testing strategies.
-How the project ensures high data persistence and quality for the bookstore client.
+Start the Application:docker-compose up
 
-Documentation:
-Document the entire system, including setup instructions, how to run the project, and how to execute tests.
-Write a README file that includes an overview of the project, dependencies, and how to get started.
+Database Schema
+The database contains tables like Books, Authors, Customers, Publishers, Reviews, Genres, and Sales. Refer to the Entity-Relationship Diagram for a visual representation.
 
-Responsibility List:
-Compile and include the responsibility list in the project submission.
-Ensure the documentation and presentation materials are clear, concise, and professional.
+CRUD Operations
+CRUD operations are implemented for all tables, allowing users to create, read, update, and delete entries efficiently. These operations also handle business logic like tracking power writers and loyal customers.
 
-Testing:
-Command to run all UnitTest: npm run test
-Due to an issue with pv semaphore, not all tests may pass when running npm run test.Thus, we have seperate command for all UnitTest
+Testing
+Unit Tests: npm run test
+Due to an issue with the pv semaphore, not all tests may pass with npm run test. Use the specific commands below to run tests for individual modules:
+test:flatfile
+test:author
+test:book
+test:customer
+test:publisher
+test:review
+test:purchase
+test:sale
 
+Integration Tests: npm start
 
+Entity-Relationship Diagram
+Refer to the attached Entity-Relationship Diagram (ERD) to understand the relationships between different entities within the database.
