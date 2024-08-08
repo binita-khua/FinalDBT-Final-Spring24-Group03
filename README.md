@@ -105,3 +105,5 @@ Integration Tests: npm start
 
 Entity-Relationship Diagram
 Refer to the attached Entity-Relationship Diagram (ERD) to understand the relationships between different entities within the database.
+![image](https://github.com/user-attachments/assets/f9deb291-b4d0-496a-9826-244dea302908)
+
