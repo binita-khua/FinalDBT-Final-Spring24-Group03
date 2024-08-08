@@ -71,6 +71,7 @@ This project is an online bookstore system that manages physical books, e-books,
 ### **Installation**
 1. **Clone the Repository:**
    ```bash
+   https://github.com/binita-khua/DBT-FinalExam-Group3.git
  
  **Install Dependencies:**
 npm install
