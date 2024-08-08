@@ -58,7 +58,7 @@ This project is an online bookstore system that manages physical books, e-books,
 ## **Technologies Used**
 - **TypeScript**: Main programming language.
 - **TypeORM**: ORM used for managing database interactions.
-- **PostgreSQL/MySQL**: Relational database used.
+- **PostgreSQL**: Relational database used.
 - **Docker**: Used for containerizing the application.
 - **Jest**: A testing framework for unit and integration tests.
 
@@ -71,9 +71,7 @@ This project is an online bookstore system that manages physical books, e-books,
 ### **Installation**
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/DBT-Final-Spring24-Group3.git
-   cd DBT-Final-Spring24-Group3
-   
+ 
  **Install Dependencies:**
 npm install
  
@@ -93,17 +91,18 @@ The database contains tables like Books, Authors, Customers, Publishers, Reviews
 CRUD operations are implemented for all tables, allowing users to create, read, update, and delete entries efficiently. These operations also handle business logic like tracking power writers and loyal customers.
 
 **Testing**
-**Unit Tests:**
-To run all Unit tests: npm run test
-Due to an issue with the pv semaphore, not all tests may pass with npm run test. Use the specific commands below to run tests for individual modules:
-test:flatfile
-test:author
-test:book
-test:customer
-test:publisher
-test:review
-test:purchase
-test:sale
+## **Unit Tests**
+- To run all Unit tests: `npm run test`
+- Due to an issue with the `pv semaphore`, not all tests may pass with `npm run test`. Use the specific commands below to run tests for individual modules:
+  - `test:flatfile`
+  - `test:author`
+  - `test:book`
+  - `test:customer`
+  - `test:publisher`
+  - `test:review`
+  - `test:purchase`
+  - `test:sale`
+
 
 **Integration Tests:**
 To run all Integration Tests: npm start
