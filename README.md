@@ -28,8 +28,7 @@ This project is an online bookstore system that manages physical books, e-books,
    - Define entities, relationships, and constraints.
    - Ensure the database is containerized and works in a Docker environment.
 
-3. **Data Migration:**
-   - Implement a migration script that populates each table with at least three rows of data for testing and demonstration purposes.
+
 
 ### **Binita Khua: CRUD Operations & Unit Testing**
 1. **CRUD Implementation:**
